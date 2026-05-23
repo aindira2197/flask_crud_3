@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Manager</title>
+</head>
+<body>
+
+    <h1>Contacts List</h1>
+
+    <a href="/create">
+        Add Contact
+    </a>
+
+    <hr>
+
+    {% for contact in contacts %}
+
+        <h2>{{ contact.fullname }}</h2>
+
+        <p>Phone: {{ contact.phone }}</p>
+
+        <p>Email: {{ contact.email }}</p>
+
+        <p>Created: {{ contact.created_at }}</p>
+
+        <hr>
+
+    {% endfor %}
+
+</body>
+</html>
